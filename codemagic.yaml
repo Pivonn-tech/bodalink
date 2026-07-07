@@ -1,0 +1,14 @@
+workflows:
+  android-debug:
+    name: Android Debug Build
+
+    environment:
+      flutter: stable
+
+    scripts:
+      - flutter pub get
+      - flutter build appbundle --debug
+
+    artifacts:
+      - build/**/outputs/**/*.aab
+      - build/**/outputs/**/*.apk
