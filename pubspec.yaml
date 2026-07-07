@@ -17,31 +17,6 @@ dependencies:
   # Routing
   go_router: ^16.0.0
 
-  # Networking
-  dio: ^5.9.0
-
-  # Secure Storage
-  flutter_secure_storage: ^9.2.4
-
-  # Local Storage
-  shared_preferences: ^2.5.3
-
-  # Maps & Location
-  google_maps_flutter: ^2.12.3
-  geolocator: ^14.0.2
-  geocoding: ^4.0.0
-
-  # Permissions
-  permission_handler: ^12.0.1
-
-  # UI
-  flutter_svg: ^2.2.0
-  cached_network_image: ^3.4.1
-
-  # Utilities
-  intl: ^0.20.2
-  uuid: ^4.5.1
-
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -49,8 +24,3 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
-
-  assets:
-    - assets/images/
-    - assets/icons/
-    - assets/animations/
