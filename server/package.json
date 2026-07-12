@@ -19,6 +19,7 @@
   "author": "Pivonn Tech",
   "license": "MIT",
   "dependencies": {
+    "@prisma/client": "^7.8.0",
     "bcrypt": "^6.0.0",
     "compression": "^1.8.1",
     "cookie-parser": "^1.4.7",
@@ -30,6 +31,7 @@
     "morgan": "^1.10.1",
     "pino": "^10.0.0",
     "pino-http": "^11.0.0",
+    "prisma": "^7.8.0",
     "zod": "^4.0.5"
   },
   "devDependencies": {

@@ -1,0 +1,34 @@
+generator client {
+  provider      = "prisma-client"
+  output        = "../src/generated/prisma"
+  binaryTargets = ["native", "linux-arm64-openssl-3.0.x"]
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+enum UserRole {
+  PASSENGER
+  RIDER
+  ADMIN
+}
+
+enum UserStatus {
+  ACTIVE
+  INACTIVE
+  SUSPENDED
+}
+
+model User {
+  id           String      @id @default(cuid())
+  email        String      @unique
+  phone        String      @unique
+  passwordHash String
+
+  role         UserRole    @default(PASSENGER)
+  status       UserStatus  @default(ACTIVE)
+
+  createdAt    DateTime    @default(now())
+  updatedAt    DateTime    @updatedAt
+}
