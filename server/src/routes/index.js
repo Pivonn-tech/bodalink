@@ -1,15 +1,11 @@
 import { Router } from "express";
 
+import healthRoutes from "./health.js";
+import v1Routes from "./v1/index.js";
+
 const router = Router();
 
-router.get("/", (req, res) => {
-  res.status(200).json({
-    success: true,
-    application: "BODALINK API",
-    version: "0.1.0",
-    status: "running",
-    timestamp: new Date().toISOString(),
-  });
-});
+router.use("/health", healthRoutes);
+router.use("/api/v1", v1Routes);
 
 export default router;
